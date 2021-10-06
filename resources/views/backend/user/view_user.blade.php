@@ -26,41 +26,6 @@
 			</div>
 		</div>
 		<!-- /Page Header -->
-
-		<!-- Search Filter -->
-		<div class="row filter-row">
-
-			<div class="col-sm-6 col-md-3 col-lg-3 col-xl-3 col-12">  
-				<div class="form-group form-focus select-focus">
-					<select class="select floating"> 
-						<option> -- Rol -- </option>
-						<option>Admin</option>
-						<option>User</option>
-					</select>
-					<label class="focus-label">Rol</label>
-				</div>
-		   </div>
-
-		   <div class="col-sm-6 col-md-3 col-lg-3 col-xl-3 col-12">  
-				<div class="form-group form-focus">
-					<input type="text" class="form-control floating">
-					<label class="focus-label">Nombre</label>
-				</div>
-		   </div>
-
-		   <div class="col-sm-6 col-md-3 col-lg-3 col-xl-3 col-12">  
-				<div class="form-group form-focus">
-					<input type="text" class="form-control floating">
-					<label class="focus-label">Correo</label>
-				</div>
-		   </div>
-
-		   <div class="col-sm-6 col-md-3 col-lg-3 col-xl-3 col-12">  
-				<a href="#" class="btn btn-success btn-block"> Buscar </a>  
-		   </div>     
-
-        </div>
-		<!-- /Search Filter -->
 		
 		<div class="row">
 			<div class="col-sm-12">
@@ -109,5 +74,7 @@
 	
 </div>
 <!-- /Page Wrapper -->
+
+
 
 @endsection
