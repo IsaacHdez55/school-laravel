@@ -1,6 +1,6 @@
 @extends('admin.admin_master')
 
-@section('title','Gestión de Usuarios')
+@section('title','Gestión de Clases')
 
 @section('admin')
 
@@ -14,14 +14,14 @@
 		<div class="page-header">
 			<div class="row align-items-center">
 				<div class="col">
-					<h3 class="page-title">Gestión de Usuarios</h3>
+					<h3 class="page-title">Gestión de Clases</h3>
 					<ul class="breadcrumb">
 						<li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Dashboard</a></li>
-						<li class="breadcrumb-item active">Gestión de Usuarios</li>
+						<li class="breadcrumb-item active">Gestión de Clases</li>
 					</ul>
 				</div>
 				<div class="col-auto float-right ml-auto">
-					<a href="{{ route('users.add') }}" class="btn add-btn"><i class="fa fa-plus"></i> Agregar Usuarios</a>
+					<a href="{{ route('users.add') }}" class="btn add-btn"><i class="fa fa-plus"></i> Agregar Clase</a>
 				</div>
 			</div>
 		</div>
@@ -33,29 +33,25 @@
 					<div class="card-body">
 
 						<div class="table-responsive">
-							<table id="users" width="100%" class="datatable table table-bordered table-striped">
+							<table id="student_class" width="100%" class="datatable table table-bordered table-striped">
 								<thead>
 									<tr>
 										<th style="width:10px">#</th>
-										<th>Rol</th>
-										<th>Nombre</th>
-										<th>Correo Electrónico</th>
+										<th>Clase</th>
 										<th style="width: 25%;">Acciones</th>
 									</tr>
 								</thead>
 								<tbody>
-									@foreach ($allData as $key => $user)
+									@foreach ($allData as $key => $student)
 
 										<tr>
 											<td>{{ $key + 1 }}</td>
-											<td>{{ $user->usertype }}</td>
-											<td>{{ $user->name }}</td>
-											<td>{{ $user->email }}</td>
+											<td>{{ $student->name }}</td>
 											<td>
 												
-												<a href="{{ route('users.edit', $user->id) }}" class="btn btn-info">Editar</a>
+												<a href="{{ route('users.edit', $student->id) }}" class="btn btn-info">Editar</a>
 
-												<a href="{{ route('users.delete', $user->id) }}" class="btn btn-danger" id="delete">Eliminar</a>
+												<a href="{{ route('users.delete', $student->id) }}" class="btn btn-danger" id="delete">Eliminar</a>
 
 											</td>
 										</tr>
@@ -74,7 +70,5 @@
 	
 </div>
 <!-- /Page Wrapper -->
-
-
 
 @endsection

@@ -33,6 +33,13 @@ $route = Route::current()->getName();
             </ul>
           </li>
 
+          <li class="submenu {{ ($prefix == '/setups')?'active':'' }} " >
+            <a class=""><i class="la la-building"></i> <span> Académico</span> <span class="menu-arrow"></span></a>
+            <ul style="display: none;">
+              <li><a class="" href="{{ route('student.class.view') }}"> Clases </a></li>
+            </ul>
+          </li>
+
       </ul>
 
     </div>
