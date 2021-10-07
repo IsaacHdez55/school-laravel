@@ -33,7 +33,7 @@
 					<div class="card-body">
 
 						<div class="table-responsive">
-							<table id="users" width="100%" class="datatable table table-bordered table-striped">
+							<table id="users_table" width="100%" class="datatable table table-bordered table-striped">
 								<thead>
 									<tr>
 										<th style="width:10px">#</th>
@@ -74,7 +74,5 @@
 	
 </div>
 <!-- /Page Wrapper -->
-
-
 
 @endsection
