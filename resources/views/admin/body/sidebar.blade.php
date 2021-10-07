@@ -37,6 +37,7 @@ $route = Route::current()->getName();
             <a class=""><i class="la la-building"></i> <span> Académico</span> <span class="menu-arrow"></span></a>
             <ul style="display: none;">
               <li><a class="" href="{{ route('student.class.view') }}"> Clases </a></li>
+              <li><a class="" href="{{ route('student.year.view') }}"> Año Académico </a></li>
             </ul>
           </li>
 
