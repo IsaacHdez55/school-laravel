@@ -11,7 +11,7 @@
     <title>@yield('title')</title>
 	
 		<!-- Favicon -->
-  	<link rel="shortcut icon" type="image/x-icon" href="{{ asset('backend/img/logo.png') }}">
+  	<link rel="shortcut icon" type="image/x-icon" href="{{ asset('backend/img/favicon.png') }}">
 	
 		<!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{{ asset('backend/css/bootstrap.min.css') }}">
@@ -130,20 +130,20 @@
 					var link = $(this).attr("href");
 
 					Swal.fire({
-					  title: '¿Está seguro de borrar el usuario?',
+					  title: '¿Estás seguro de borrar la información?',
 					  text: "¡Si no lo está puede cancelar la accíón!",
 					  icon: 'warning',
 					  showCancelButton: true,
 					  confirmButtonColor: '#3085d6',
 					  cancelButtonColor: '#d33',
 					  cancelButtonText: 'Cancelar',
-					  confirmButtonText: 'Si, borrar usuario!'
+					  confirmButtonText: 'Si, borrar!'
 					}).then((result) => {
 					  if (result.isConfirmed) {
 					  	window.location.href = link
 					    Swal.fire(
 					      'Eliminado!',
-					      'El usuario ha sido eliminado.',
+					      'La información ha sido eliminada.',
 					      'success'
 					    )
 					  }

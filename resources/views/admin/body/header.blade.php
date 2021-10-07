@@ -3,8 +3,8 @@
 		<!-- Logo -->
     <div class="header-left">
     	<a href="{{ route('dashboard') }}" class="logo">
-				<img src="{{ asset('backend/img/logo.png') }}" alt="">
-			</a>
+			<img src="{{ asset('backend/img/logo2.png') }}" alt="">
+		</a>
 			{{-- <h3><b>School</b> World</h3> --}}
     </div>
 		<!-- /Logo -->

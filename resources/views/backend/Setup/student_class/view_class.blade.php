@@ -21,7 +21,7 @@
 					</ul>
 				</div>
 				<div class="col-auto float-right ml-auto">
-					<a href="{{ route('users.add') }}" class="btn add-btn"><i class="fa fa-plus"></i> Agregar Clase</a>
+					<a href="{{ route('student.class.add') }}" class="btn add-btn"><i class="fa fa-plus"></i> Agregar Clase</a>
 				</div>
 			</div>
 		</div>
@@ -49,9 +49,9 @@
 											<td>{{ $student->name }}</td>
 											<td>
 												
-												<a href="{{ route('users.edit', $student->id) }}" class="btn btn-info">Editar</a>
+												<a href="{{ route('student.class.edit', $student->id) }}" class="btn btn-info">Editar</a>
 
-												<a href="{{ route('users.delete', $student->id) }}" class="btn btn-danger" id="delete">Eliminar</a>
+												<a href="{{ route('student.class.delete', $student->id) }}" class="btn btn-danger" id="delete">Eliminar</a>
 
 											</td>
 										</tr>
