@@ -1,6 +1,6 @@
 @extends('admin.admin_master')
 
-@section('title','Student Group List')
+@section('title','School Subject List')
 
 @section('admin')
 
@@ -14,14 +14,14 @@
 		<div class="page-header">
 			<div class="row align-items-center">
 				<div class="col">
-					<h3 class="page-title">Student Group List</h3>
+					<h3 class="page-title">School Subject List</h3>
 					<ul class="breadcrumb">
 						<li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Dashboard</a></li>
-						<li class="breadcrumb-item active">Student Group List</li>
+						<li class="breadcrumb-item active">School Subject List</li>
 					</ul>
 				</div>
 				<div class="col-auto float-right ml-auto">
-					<a href="{{ route('student.group.add') }}" class="btn add-btn"><i class="fa fa-plus"></i> Add Student Group</a>
+					<a href="{{ route('school.subject.add') }}" class="btn add-btn"><i class="fa fa-plus"></i> Add Subject</a>
 				</div>
 			</div>
 		</div>
@@ -33,7 +33,7 @@
 					<div class="card-body">
 
 						<div class="table-responsive">
-							<table id="group" width="100%" class="datatable table table-bordered table-striped">
+							<table id="exam_type" width="100%" class="datatable table table-bordered table-striped">
 								<thead>
 									<tr>
 										<th style="width:10px">#</th>
@@ -42,16 +42,16 @@
 									</tr>
 								</thead>
 								<tbody>
-									@foreach ($allData as $key => $group)
+									@foreach ($allData as $key => $subject)
 
 										<tr>
 											<td>{{ $key + 1 }}</td>
-											<td>{{ $group->name }}</td>
+											<td>{{ $subject->name }}</td>
 											<td>
 												
-												<a href="{{ route('student.group.edit', $group->id) }}" class="btn btn-info">Edit</a>
+												<a href="{{ route('school.subject.edit', $subject->id) }}" class="btn btn-info">Edit</a>
 
-												<a href="{{ route('student.group.delete', $group->id) }}" class="btn btn-danger" id="delete">Delete</a>
+												<a href="{{ route('school.subject.delete', $subject->id) }}" class="btn btn-danger" id="delete">Delete</a>
 
 											</td>
 										</tr>

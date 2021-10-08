@@ -45,7 +45,7 @@ class UserController extends Controller
 
         $notification = array(
 
-            'message' => '¡El usuario ha sido guardado correctamente!',
+            'message' => 'User Inserted Successfully',
             'alert-type' => 'success',
 
         );
@@ -73,7 +73,7 @@ class UserController extends Controller
 
         $notification = array(
 
-            'message' => '¡El usuario ha sido actualizado!',
+            'message' => 'User Updated Successfully',
             'alert-type' => 'info',
 
         );
@@ -89,7 +89,7 @@ class UserController extends Controller
 
         $notification = array(
 
-            'message' => '¡El usuario ha sido eliminado!',
+            'message' => 'User Deleted Successfully',
             'alert-type' => 'info',
 
         );

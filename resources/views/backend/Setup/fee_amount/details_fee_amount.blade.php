@@ -1,6 +1,6 @@
 @extends('admin.admin_master')
 
-@section('title','Detalles de Importe de Tarifa')
+@section('title','Fee Amount Details')
 
 @section('admin')
 
@@ -14,15 +14,15 @@
 		<div class="page-header">
 			<div class="row align-items-center">
 				<div class="col">
-					<h3 class="page-title">Detalles de Importe de Tarifa</h3>
+					<h3 class="page-title">Fee Amount Details</h3>
 					<ul class="breadcrumb">
 						<li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Dashboard</a></li>
-						<li class="breadcrumb-item"><a href="{{ route('fee.amount.view') }}">Gestión de Importe de Tarifas</a></li>
-						<li class="breadcrumb-item active">Detalles de Importe de Tarifa</li>
+						<li class="breadcrumb-item"><a href="{{ route('fee.amount.view') }}">Student Fee Amount List</a></li>
+						<li class="breadcrumb-item active">Fee Amount Details</li>
 					</ul>
 				</div>
 				<div class="col-auto float-right ml-auto">
-					<a href="{{ route('fee.amount.add') }}" class="btn add-btn"><i class="fa fa-plus"></i> Agregar Importe de Tarifa</a>
+					<a href="{{ route('fee.amount.add') }}" class="btn add-btn"><i class="fa fa-plus"></i> Add Fee Amount</a>
 				</div>
 			</div>
 		</div>
@@ -33,7 +33,7 @@
 				<div class="card mb-0">
 
 					<div class="card-header">
-						<h4 class="card-title mb-0"><strong>Tarifa: </strong> {{ $detailsData['0']['fee_category']['name'] }}</h4>
+						<h4 class="card-title mb-0"><strong>Fee Category: </strong> {{ $detailsData['0']['fee_category']['name'] }}</h4>
 					</div>
 
 					<div class="card-body">
@@ -43,8 +43,8 @@
 								<thead>
 									<tr>
 										<th style="width:10px">#</th>
-										<th>Clase</th>
-										<th style="width: 25%;">Cantidad</th>
+										<th>Class Name</th>
+										<th style="width: 25%;">Amount</th>
 									</tr>
 								</thead>
 								<tbody>

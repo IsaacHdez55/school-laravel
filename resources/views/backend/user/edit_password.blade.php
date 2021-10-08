@@ -1,6 +1,6 @@
 @extends('admin.admin_master')
 
-@section('title','Editar Contraseña')
+@section('title','Change Password')
 
 @section('admin')
 
@@ -14,11 +14,11 @@
 		<div class="page-header">
 			<div class="row">
 				<div class="col">
-					<h3 class="page-title">Editar Contraseña</h3>
+					<h3 class="page-title">Change Password</h3>
 					<ul class="breadcrumb">
 						<li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Dashboard</a></li>
-						<li class="breadcrumb-item"><a href="{{ route('profile.view') }}">Gestión de Contraseña</a></li>
-						<li class="breadcrumb-item active">Editar Contraseña</li>
+						<li class="breadcrumb-item"><a href="{{ route('profile.view') }}">My profile</a></li>
+						<li class="breadcrumb-item active">Change Password</li>
 					</ul>
 				</div>
 			</div>
@@ -40,7 +40,7 @@
 
 											
 									<div class="form-group">
-										<label class="">Contraseña antigua <span class="text-danger">*</span></label>
+										<label class="">Current Password <span class="text-danger">*</span></label>
 										<input type="password" id="current_password" name="oldpassword" class="form-control">
 
 										@error('oldpassword')
@@ -53,7 +53,7 @@
 
 									
 									<div class="form-group">
-										<label class="">Nueva contraseña <span class="text-danger">*</span></label>
+										<label class="">New Password <span class="text-danger">*</span></label>
 										<input type="password" id="password" name="password" class="form-control">
 
 										@error('password')
@@ -65,7 +65,7 @@
 									</div>
 
 									<div class="form-group">
-										<label class="">Confirmar contraseña <span class="text-danger">*</span></label>
+										<label class="">Confirm Password <span class="text-danger">*</span></label>
 										<input type="password" id="password_confirmation" name="password_confirmation" class="form-control">
 
 										@error('password_confirmation')
@@ -79,7 +79,7 @@
 
 									<div>
 										
-										<input type="submit" class="btn btn-primary" value="Actualizar">
+										<input type="submit" class="btn btn-primary" value="Submit">
 
 									</div>
 

@@ -1,6 +1,6 @@
 @extends('admin.admin_master')
 
-@section('title','Agregar Usuario')
+@section('title','Add user')
 
 @section('admin')
 
@@ -14,11 +14,11 @@
 		<div class="page-header">
 			<div class="row">
 				<div class="col">
-					<h3 class="page-title">Agregar Usuario</h3>
+					<h3 class="page-title">Add user</h3>
 					<ul class="breadcrumb">
 						<li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Dashboard</a></li>
-						<li class="breadcrumb-item"><a href="{{ route('user.view') }}">Gestión de Usuarios</a></li>
-						<li class="breadcrumb-item active">Agregar Usuario</li>
+						<li class="breadcrumb-item"><a href="{{ route('user.view') }}">Manage Users List</a></li>
+						<li class="breadcrumb-item active">Add user</li>
 					</ul>
 				</div>
 			</div>
@@ -43,9 +43,9 @@
 										<div class="col-md-6">
 
 											<div class="form-group">
-												<label class="">Rol <span class="text-danger">*</span></label>
+												<label class="">User Role <span class="text-danger">*</span></label>
 												<select class="form-control" name="usertype" id="usertype" required>
-													<option value="" selected disabled>-- Seleccionar rol --</option>
+													<option value="" selected disabled>-- Select Role --</option>
 													<option value="Admin">Admin</option>
 													<option value="User">User</option>
 												</select>
@@ -58,7 +58,7 @@
 										<div class="col-md-6">
 											
 											<div class="form-group">
-												<label class="">Nombre de Usuario<span class="text-danger">*</span></label>
+												<label class="">User Name<span class="text-danger">*</span></label>
 												<div class="">
 													<input type="text" name="name" class="form-control" required>
 												</div>
@@ -77,7 +77,7 @@
 										<div class="col-md-6">
 											
 											<div class="form-group">
-												<label class="">Correo electrónico <span class="text-danger">*</span></label>
+												<label class="">User Email <span class="text-danger">*</span></label>
 												<input type="email" name="email" class="form-control" required>
 											</div>
 
@@ -88,7 +88,7 @@
 										<div class="col-md-6">
 											
 											<div class="form-group">
-												<label class="">Contraseña <span class="text-danger">*</span></label>
+												<label class="">User Password <span class="text-danger">*</span></label>
 												<input type="password" name="password" class="form-control" required>
 											</div>
 
@@ -102,8 +102,8 @@
 
 									<div>
 										
-										<input type="submit" class="btn btn-primary" value="Agregar" required>
-										<a href="{{ route('user.view') }}" class="btn btn-secondary"> Cancelar</a>
+										<input type="submit" class="btn btn-primary" value="Submit" required>
+										<a href="{{ route('user.view') }}" class="btn btn-secondary"> Cancel</a>
 
 									</div>
 

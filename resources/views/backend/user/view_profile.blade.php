@@ -1,6 +1,6 @@
 @extends('admin.admin_master')
 
-@section('title','Mi Perfil')
+@section('title','My Profile')
 
 @section('admin')
 
@@ -13,10 +13,10 @@
 		<div class="page-header">
 			<div class="row">
 				<div class="col-sm-12">
-					<h3 class="page-title">Mi Perfil</h3>
+					<h3 class="page-title">My Profile</h3>
 					<ul class="breadcrumb">
 						<li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Dashboard</a></li>
-						<li class="breadcrumb-item active">Mi Perfil</li>
+						<li class="breadcrumb-item active">My Profile</li>
 					</ul>
 				</div>
 			</div>
@@ -38,23 +38,23 @@
 									<div class="col-md-5">
 										<div class="profile-info-left">
 											<h3 class="user-name m-t-0 mb-0">{{ $user->name }}</h3>
-											<div class="staff-id">Rol {{ $user->usertype }}</div>
-											<div class="staff-id">Correo Electrónico: {{ $user->email }}</div>
-											<div class="staff-msg"><a class="btn btn-custom" href="{{ route('profile.edit') }}">Editar perfil</a></div>
+											<div class="staff-id">User Type: {{ $user->usertype }}</div>
+											<div class="staff-id">User Email: {{ $user->email }}</div>
+											<div class="staff-msg"><a class="btn btn-custom" href="{{ route('profile.edit') }}">Edit Profile</a></div>
 										</div>
 									</div>
 									<div class="col-md-7">
 										<ul class="personal-info">
 											<li>
-												<div class="title">Teléfono:</div>
+												<div class="title">Mobile No:</div>
 												<div class="text">{{ $user->mobile }}</div>
 											</li>
 											<li>
-												<div class="title">Dirección:</div>
+												<div class="title">Address:</div>
 												<div class="text">{{ $user->address }}</div>
 											</li>
 											<li>
-												<div class="title">Genero:</div>
+												<div class="title">Gender:</div>
 												<div class="text">{{ $user->gender }}</div>
 											</li>
 											

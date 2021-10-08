@@ -52,7 +52,7 @@ class ProfileController extends Controller
 
         $notification = array(
 
-            'message' => '¡El perfil ha sido editado correctamente!',
+            'message' => 'User Profile Updated Successfully',
             'alert-type' => 'success',
 
         );
@@ -91,7 +91,7 @@ class ProfileController extends Controller
 
             $notification = array(
 
-                'message' => 'Tú contrasea antigua es incorrecta.',
+                'message' => 'Your old password is incorrect',
                 'alert-type' => 'error',
 
             );  

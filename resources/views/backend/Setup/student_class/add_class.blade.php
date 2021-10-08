@@ -1,6 +1,6 @@
 @extends('admin.admin_master')
 
-@section('title','Agregar Clase')
+@section('title','Add Student Class')
 
 @section('admin')
 
@@ -14,11 +14,11 @@
 		<div class="page-header">
 			<div class="row">
 				<div class="col">
-					<h3 class="page-title">Agregar Clase</h3>
+					<h3 class="page-title">Add Student Class</h3>
 					<ul class="breadcrumb">
 						<li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Dashboard</a></li>
-						<li class="breadcrumb-item"><a href="{{ route('student.class.view') }}">Gestión de Clase</a></li>
-						<li class="breadcrumb-item active">Agregar Clase</li>
+						<li class="breadcrumb-item"><a href="{{ route('student.class.view') }}">Student Class List</a></li>
+						<li class="breadcrumb-item active">Add Student Class</li>
 					</ul>
 				</div>
 			</div>
@@ -40,7 +40,7 @@
 
 											
 									<div class="form-group">
-										<label class="">Nombre de la Clase <span class="text-danger">*</span></label>
+										<label class="">Student Class Name <span class="text-danger">*</span></label>
 										<input type="text" id="name" name="name" class="form-control" required>
 
 										@error('name')
@@ -53,9 +53,9 @@
 
 									<div>
 										
-										<input type="submit" class="btn btn-primary" value="Agregar">
+										<input type="submit" class="btn btn-primary" value="Submit">
 
-										<a href="{{ route('student.class.view') }}" class="btn btn-secondary"> Cancelar</a>
+										<a href="{{ route('student.class.view') }}" class="btn btn-secondary"> Cancel</a>
 
 									</div>
 

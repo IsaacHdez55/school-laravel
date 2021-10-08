@@ -1,6 +1,6 @@
 @extends('admin.admin_master')
 
-@section('title','Gestión de Usuarios')
+@section('title','Manage Users List')
 
 @section('admin')
 
@@ -14,14 +14,14 @@
 		<div class="page-header">
 			<div class="row align-items-center">
 				<div class="col">
-					<h3 class="page-title">Gestión de Usuarios</h3>
+					<h3 class="page-title">Manage Users List</h3>
 					<ul class="breadcrumb">
 						<li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Dashboard</a></li>
-						<li class="breadcrumb-item active">Gestión de Usuarios</li>
+						<li class="breadcrumb-item active">Manage Users List</li>
 					</ul>
 				</div>
 				<div class="col-auto float-right ml-auto">
-					<a href="{{ route('users.add') }}" class="btn add-btn"><i class="fa fa-plus"></i> Agregar Usuarios</a>
+					<a href="{{ route('users.add') }}" class="btn add-btn"><i class="fa fa-plus"></i> Add User</a>
 				</div>
 			</div>
 		</div>
@@ -38,9 +38,9 @@
 									<tr>
 										<th style="width:10px">#</th>
 										<th>Rol</th>
-										<th>Nombre</th>
-										<th>Correo Electrónico</th>
-										<th style="width: 25%;">Acciones</th>
+										<th>Name</th>
+										<th>Email</th>
+										<th style="width: 25%;">Action</th>
 									</tr>
 								</thead>
 								<tbody>
@@ -53,9 +53,9 @@
 											<td>{{ $user->email }}</td>
 											<td>
 												
-												<a href="{{ route('users.edit', $user->id) }}" class="btn btn-info">Editar</a>
+												<a href="{{ route('users.edit', $user->id) }}" class="btn btn-info">Edit</a>
 
-												<a href="{{ route('users.delete', $user->id) }}" class="btn btn-danger" id="delete">Eliminar</a>
+												<a href="{{ route('users.delete', $user->id) }}" class="btn btn-danger" id="delete">Delete</a>
 
 											</td>
 										</tr>

@@ -49,7 +49,7 @@ class FeeAmountController extends Controller
 
         $notification = array(
 
-            'message' => '¡La información ha sido guardada correctamente!',
+            'message' => 'Fee Amount Inserted Successfully',
             'alert-type' => 'success',
 
         );
@@ -76,7 +76,7 @@ class FeeAmountController extends Controller
         
             $notification = array(
 
-                'message' => 'Lo sentimos, usted no seleccionó ninguna clase',
+                'message' => 'Sorry You do not select any class amount',
                 'alert-type' => 'error',
 
             );
@@ -103,7 +103,7 @@ class FeeAmountController extends Controller
 
         $notification = array(
 
-            'message' => '¡La información ha sido editada correctamente!',
+            'message' => 'Data Updated Successfully',
             'alert-type' => 'success',
 
         );

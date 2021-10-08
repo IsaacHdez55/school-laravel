@@ -125,9 +125,9 @@ $user = DB::table('users')->where('id',Auth::user()->id)->first();
 					<span>{{ $user->name }}</span>
 				</a>
 				<div class="dropdown-menu">
-					<a class="dropdown-item" href="{{ route('profile.view') }}">Mi Perfil</a>
-					<a class="dropdown-item" href="{{ route('password.view') }}">Cambiar contraseña</a>
-					<a class="dropdown-item" href="{{ route('admin.logout') }}">Salir</a>
+					<a class="dropdown-item" href="{{ route('profile.view') }}">My profle</a>
+					<a class="dropdown-item" href="{{ route('password.view') }}">Change Password</a>
+					<a class="dropdown-item" href="{{ route('admin.logout') }}">Logout</a>
 				</div>
 			</li>
 		</ul>
@@ -137,9 +137,9 @@ $user = DB::table('users')->where('id',Auth::user()->id)->first();
 		<div class="dropdown mobile-user-menu">
 			<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
 			<div class="dropdown-menu dropdown-menu-right">
-				<a class="dropdown-item" href="{{ route('profile.view') }}">Mi Perfil</a>
-				<a class="dropdown-item" href="{{ route('password.view') }}">Cambiar contraseña</a>
-				<a class="dropdown-item" href="{{ route('admin.logout') }}">Salir</a>
+				<a class="dropdown-item" href="{{ route('profile.view') }}">My profle</a>
+				<a class="dropdown-item" href="{{ route('password.view') }}">Change Password</a>
+				<a class="dropdown-item" href="{{ route('admin.logout') }}">Logout</a>
 			</div>
 		</div>
 		<!-- /Mobile Menu -->

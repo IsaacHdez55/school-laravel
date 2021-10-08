@@ -1,6 +1,6 @@
 @extends('admin.admin_master')
 
-@section('title','Agregar Examen')
+@section('title','Add Exam Type')
 
 @section('admin')
 
@@ -14,11 +14,11 @@
 		<div class="page-header">
 			<div class="row">
 				<div class="col">
-					<h3 class="page-title">Agregar Examen</h3>
+					<h3 class="page-title">Add Exam Type</h3>
 					<ul class="breadcrumb">
 						<li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Dashboard</a></li>
-						<li class="breadcrumb-item"><a href="{{ route('exam.type.view') }}">Gestión de Examenes</a></li>
-						<li class="breadcrumb-item active">Agregar Examen</li>
+						<li class="breadcrumb-item"><a href="{{ route('exam.type.view') }}">Exam Type List</a></li>
+						<li class="breadcrumb-item active">Add Exam Type</li>
 					</ul>
 				</div>
 			</div>
@@ -40,7 +40,7 @@
 
 											
 									<div class="form-group">
-										<label class="">Nombre del Examen <span class="text-danger">*</span></label>
+										<label class="">Exam Type Name <span class="text-danger">*</span></label>
 										<input type="text" id="name" name="name" class="form-control" required>
 
 										@error('name')
@@ -53,9 +53,9 @@
 
 									<div>
 										
-										<input type="submit" class="btn btn-primary" value="Agregar">
+										<input type="submit" class="btn btn-primary" value="Submit">
 
-										<a href="{{ route('exam.type.view') }}" class="btn btn-secondary"> Cancelar</a>
+										<a href="{{ route('exam.type.view') }}" class="btn btn-secondary"> Cancel</a>
 
 									</div>
 

@@ -1,6 +1,6 @@
 @extends('admin.admin_master')
 
-@section('title','Agregar Año Académico')
+@section('title','Add Student Year')
 
 @section('admin')
 
@@ -14,11 +14,11 @@
 		<div class="page-header">
 			<div class="row">
 				<div class="col">
-					<h3 class="page-title">Agregar Año Académico</h3>
+					<h3 class="page-title">Add Student Year</h3>
 					<ul class="breadcrumb">
 						<li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Dashboard</a></li>
-						<li class="breadcrumb-item"><a href="{{ route('student.year.view') }}">Gestión de Año Académico</a></li>
-						<li class="breadcrumb-item active">Agregar Año Académico</li>
+						<li class="breadcrumb-item"><a href="{{ route('student.year.view') }}">Student Year List</a></li>
+						<li class="breadcrumb-item active">Add Student Year</li>
 					</ul>
 				</div>
 			</div>
@@ -40,7 +40,7 @@
 
 											
 									<div class="form-group">
-										<label class="">Año Académico <span class="text-danger">*</span></label>
+										<label class="">Student Year Name <span class="text-danger">*</span></label>
 										<input type="number" id="name" name="name" class="form-control" required>
 
 										@error('name')
@@ -53,9 +53,9 @@
 
 									<div>
 										
-										<input type="submit" class="btn btn-primary" value="Agregar">
+										<input type="submit" class="btn btn-primary" value="Submit">
 
-										<a href="{{ route('student.year.view') }}" class="btn btn-secondary"> Cancelar</a>
+										<a href="{{ route('student.year.view') }}" class="btn btn-secondary"> Cancel</a>
 
 									</div>
 

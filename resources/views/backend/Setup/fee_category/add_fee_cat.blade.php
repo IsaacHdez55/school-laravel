@@ -1,6 +1,6 @@
 @extends('admin.admin_master')
 
-@section('title','Agregar Tarifa')
+@section('title','Add Fee Category')
 
 @section('admin')
 
@@ -14,11 +14,11 @@
 		<div class="page-header">
 			<div class="row">
 				<div class="col">
-					<h3 class="page-title">Agregar Tarifa</h3>
+					<h3 class="page-title">Add Fee Category</h3>
 					<ul class="breadcrumb">
 						<li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Dashboard</a></li>
-						<li class="breadcrumb-item"><a href="{{ route('fee.category.view') }}">Gestión de Tarifas</a></li>
-						<li class="breadcrumb-item active">Agregar Tarifa</li>
+						<li class="breadcrumb-item"><a href="{{ route('fee.category.view') }}">Student Fee Category List</a></li>
+						<li class="breadcrumb-item active">Add Fee Category</li>
 					</ul>
 				</div>
 			</div>
@@ -40,7 +40,7 @@
 
 											
 									<div class="form-group">
-										<label class="">Nombre del Tarifa <span class="text-danger">*</span></label>
+										<label class="">Fee Category Name <span class="text-danger">*</span></label>
 										<input type="text" id="name" name="name" class="form-control" required>
 
 										@error('name')
@@ -53,9 +53,9 @@
 
 									<div>
 										
-										<input type="submit" class="btn btn-primary" value="Agregar">
+										<input type="submit" class="btn btn-primary" value="Submit">
 
-										<a href="{{ route('fee.category.view') }}" class="btn btn-secondary"> Cancelar</a>
+										<a href="{{ route('fee.category.view') }}" class="btn btn-secondary"> Cancel</a>
 
 									</div>
 

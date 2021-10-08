@@ -1,6 +1,6 @@
 @extends('admin.admin_master')
 
-@section('title','Edit Student Class')
+@section('title','Add School Subject')
 
 @section('admin')
 
@@ -14,11 +14,11 @@
 		<div class="page-header">
 			<div class="row">
 				<div class="col">
-					<h3 class="page-title">Edit Student Class</h3>
+					<h3 class="page-title">Add School Subject</h3>
 					<ul class="breadcrumb">
 						<li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Dashboard</a></li>
-						<li class="breadcrumb-item"><a href="{{ route('student.class.view') }}">Student Class List</a></li>
-						<li class="breadcrumb-item active">Edit Student Class</li>
+						<li class="breadcrumb-item"><a href="{{ route('school.subject.view') }}">School Subject List</a></li>
+						<li class="breadcrumb-item active">Add School Subject</li>
 					</ul>
 				</div>
 			</div>
@@ -30,7 +30,7 @@
 				<div class="card">
 
 					<div class="card-body">
-						<form action="{{ route('update.student.class',$editData->id) }}" method="post">
+						<form action="{{ route('store.school.subject') }}" method="post">
 
 							@csrf
 
@@ -38,9 +38,10 @@
 
 								<div class="col-12">
 
+											
 									<div class="form-group">
-										<label class="">Student Class Name <span class="text-danger">*</span></label>
-										<input type="text" id="name" name="name" class="form-control" required value="{{ $editData->name }}">
+										<label class="">Subject Name <span class="text-danger">*</span></label>
+										<input type="text" id="name" name="name" class="form-control" required>
 
 										@error('name')
 
@@ -52,9 +53,9 @@
 
 									<div>
 										
-										<input type="submit" class="btn btn-primary" value="Update">
+										<input type="submit" class="btn btn-primary" value="Submit">
 
-										<a href="{{ route('student.class.view') }}" class="btn btn-secondary"> Cancel</a>
+										<a href="{{ route('school.subject.view') }}" class="btn btn-secondary"> Cancel</a>
 
 									</div>
 

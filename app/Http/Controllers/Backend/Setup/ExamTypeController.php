@@ -36,7 +36,7 @@ class ExamTypeController extends Controller
 
         $notification = array(
 
-            'message' => '¡La información ha sido guardada correctamente!',
+            'message' => 'Exam Type Inserted Successfully',
             'alert-type' => 'success',
 
         );
@@ -68,7 +68,7 @@ class ExamTypeController extends Controller
 
         $notification = array(
 
-            'message' => '¡La información ha sido editada correctamente!',
+            'message' => 'Exam Type Updated Successfully',
             'alert-type' => 'success',
 
         );
@@ -84,7 +84,7 @@ class ExamTypeController extends Controller
 
         $notification = array(
 
-            'message' => '¡La información académico ha sido eliminada correctamente!',
+            'message' => 'Exam Type Deleted Successfully',
             'alert-type' => 'info',
 
         );

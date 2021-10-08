@@ -1,6 +1,6 @@
 @extends('admin.admin_master')
 
-@section('title','Agregar Turno')
+@section('title','Add Student Shift')
 
 @section('admin')
 
@@ -14,11 +14,11 @@
 		<div class="page-header">
 			<div class="row">
 				<div class="col">
-					<h3 class="page-title">Agregar Turno</h3>
+					<h3 class="page-title">Add Student Shift</h3>
 					<ul class="breadcrumb">
 						<li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Dashboard</a></li>
-						<li class="breadcrumb-item"><a href="{{ route('student.shift.view') }}">Gestión de Turnos</a></li>
-						<li class="breadcrumb-item active">Agregar Turno</li>
+						<li class="breadcrumb-item"><a href="{{ route('student.shift.view') }}">Student Shift List</a></li>
+						<li class="breadcrumb-item active">Add Student Shift</li>
 					</ul>
 				</div>
 			</div>
@@ -40,7 +40,7 @@
 
 											
 									<div class="form-group">
-										<label class="">Nombre del Turno <span class="text-danger">*</span></label>
+										<label class="">Student Shift Name <span class="text-danger">*</span></label>
 										<input type="text" id="name" name="name" class="form-control" required>
 
 										@error('name')
@@ -53,9 +53,9 @@
 
 									<div>
 										
-										<input type="submit" class="btn btn-primary" value="Agregar">
+										<input type="submit" class="btn btn-primary" value="Submit">
 
-										<a href="{{ route('student.shift.view') }}" class="btn btn-secondary"> Cancelar</a>
+										<a href="{{ route('student.shift.view') }}" class="btn btn-secondary"> Cancel</a>
 
 									</div>
 

@@ -1,6 +1,6 @@
 @extends('admin.admin_master')
 
-@section('title','Editar Tarifa')
+@section('title','Edit Fee Category')
 
 @section('admin')
 
@@ -14,11 +14,11 @@
 		<div class="page-header">
 			<div class="row">
 				<div class="col">
-					<h3 class="page-title">Editar Tarifa</h3>
+					<h3 class="page-title">Edit Fee Category</h3>
 					<ul class="breadcrumb">
 						<li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Dashboard</a></li>
-						<li class="breadcrumb-item"><a href="{{ route('fee.category.view') }}">Gestión de Tarifas</a></li>
-						<li class="breadcrumb-item active">Editar Tarifa</li>
+						<li class="breadcrumb-item"><a href="{{ route('fee.category.view') }}">Student Fee Category List</a></li>
+						<li class="breadcrumb-item active">Edit Fee Category</li>
 					</ul>
 				</div>
 			</div>
@@ -40,7 +40,7 @@
 
 											
 									<div class="form-group">
-										<label class="">Tarifa <span class="text-danger">*</span></label>
+										<label class="">Fee Category Name <span class="text-danger">*</span></label>
 										<input type="text" id="name" name="name" class="form-control" value="{{ $editData->name }}" required>
 
 										@error('name')
@@ -53,9 +53,9 @@
 
 									<div>
 										
-										<input type="submit" class="btn btn-primary" value="Actualizar">
+										<input type="submit" class="btn btn-primary" value="Update">
 
-										<a href="{{ route('fee.category.view') }}" class="btn btn-secondary"> Cancelar</a>
+										<a href="{{ route('fee.category.view') }}" class="btn btn-secondary"> Cancel</a>
 
 									</div>
 

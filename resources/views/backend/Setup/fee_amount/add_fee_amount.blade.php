@@ -1,6 +1,6 @@
 @extends('admin.admin_master')
 
-@section('title','Agregar Importe de Tarifa')
+@section('title','Add Fee Amount')
 
 @section('admin')
 
@@ -16,11 +16,11 @@
 		<div class="page-header">
 			<div class="row">
 				<div class="col">
-					<h3 class="page-title">Agregar Importe de Tarifa</h3>
+					<h3 class="page-title">Add Fee Amount</h3>
 					<ul class="breadcrumb">
 						<li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Dashboard</a></li>
-						<li class="breadcrumb-item"><a href="{{ route('fee.amount.view') }}">Gestión de Tarifas</a></li>
-						<li class="breadcrumb-item active">Agregar Importe de Tarifa</li>
+						<li class="breadcrumb-item"><a href="{{ route('fee.amount.view') }}">Student Fee Amount List</a></li>
+						<li class="breadcrumb-item active">Add Fee Amount</li>
 					</ul>
 				</div>
 			</div>
@@ -43,10 +43,10 @@
 									<div class="add_item">							
 
 										<div class="form-group">
-											<label class="">Tarifas <span class="text-danger">*</span></label>
+											<label class="">Fee Category <span class="text-danger">*</span></label>
 											<div class="form-focus select-focus">
 											<select class="form-control select" name="fee_category_id" id="fee_category_id" required>
-												<option value="" selected disabled>-- Seleccionar Tarifa --</option>
+												<option value="" selected disabled>-- Select Fee Category --</option>
 
 												@foreach ($fee_categories as $category)
 												
@@ -63,10 +63,10 @@
 											<div class="col-md-5">
 												
 												<div class="form-group">
-													<label class="">Clases <span class="text-danger">*</span></label>
+													<label class="">Student Class <span class="text-danger">*</span></label>
 													<div class="form-focus select-focus">
 														<select class="form-control" name="class_id[]" required>
-															<option value="" selected disabled>-- Seleccionar Clase --</option>
+															<option value="" selected disabled>-- Select Class --</option>
 
 															@foreach ($classes as $class)
 															
@@ -83,7 +83,7 @@
 											<div class="col-md-5">
 
 												<div class="form-group">
-													<label class="">Cantidad <span class="text-danger">*</span></label>
+													<label class="">Amount <span class="text-danger">*</span></label>
 													<input type="text" name="amount[]" class="form-control" required>
 												</div>
 												
@@ -107,9 +107,9 @@
 
 					<div class="card-footer">
 										
-						<input type="submit" class="btn btn-primary" value="Agregar">
+						<input type="submit" class="btn btn-primary" value="Submit">
 
-						<a href="{{ route('fee.category.view') }}" class="btn btn-secondary"> Cancelar</a>
+						<a href="{{ route('fee.category.view') }}" class="btn btn-secondary"> Cancel</a>
 
 					</div>
 
@@ -133,10 +133,10 @@
 				<div class="col-md-5">
 											
 					<div class="form-group">
-						<label class="">Clases <span class="text-danger">*</span></label>
+						<label class="">Student Class <span class="text-danger">*</span></label>
 						<div class="form-focus select-focus">
 							<select class="form-control" name="class_id[]" required>
-								<option value="" selected disabled>-- Seleccionar Clase --</option>
+								<option value="" selected disabled>-- Select Class --</option>
 
 								@foreach ($classes as $class)
 								
@@ -153,7 +153,7 @@
 				<div class="col-md-5">
 
 					<div class="form-group">
-						<label class="">Cantidad <span class="text-danger">*</span></label>
+						<label class="">Amount <span class="text-danger">*</span></label>
 						<input type="text" name="amount[]" class="form-control" required>
 					</div>
 					

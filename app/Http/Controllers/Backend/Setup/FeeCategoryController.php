@@ -36,7 +36,7 @@ class FeeCategoryController extends Controller
 
         $notification = array(
 
-            'message' => '¡La información ha sido guardada correctamente!',
+            'message' => 'Fee Category Inserted Successfully',
             'alert-type' => 'success',
 
         );
@@ -68,7 +68,7 @@ class FeeCategoryController extends Controller
 
         $notification = array(
 
-            'message' => '¡La información ha sido editada correctamente!',
+            'message' => 'Fee Category Updated Successfully',
             'alert-type' => 'success',
 
         );
@@ -84,7 +84,7 @@ class FeeCategoryController extends Controller
 
         $notification = array(
 
-            'message' => '¡La información ha sido eliminada correctamente!',
+            'message' => 'Fee Category Deleted Successfully',
             'alert-type' => 'info',
 
         );

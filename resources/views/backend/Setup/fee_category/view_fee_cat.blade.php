@@ -1,6 +1,6 @@
 @extends('admin.admin_master')
 
-@section('title','Gestión de Tarifas')
+@section('title','Student Fee Category List')
 
 @section('admin')
 
@@ -14,14 +14,14 @@
 		<div class="page-header">
 			<div class="row align-items-center">
 				<div class="col">
-					<h3 class="page-title">Gestión de Tarifas</h3>
+					<h3 class="page-title">Student Fee Category List</h3>
 					<ul class="breadcrumb">
 						<li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Dashboard</a></li>
-						<li class="breadcrumb-item active">Gestión de Tarifas</li>
+						<li class="breadcrumb-item active">Student Fee Category List</li>
 					</ul>
 				</div>
 				<div class="col-auto float-right ml-auto">
-					<a href="{{ route('fee.category.add') }}" class="btn add-btn"><i class="fa fa-plus"></i> Agregar Tarifa</a>
+					<a href="{{ route('fee.category.add') }}" class="btn add-btn"><i class="fa fa-plus"></i> Add Fee Category</a>
 				</div>
 			</div>
 		</div>
@@ -37,8 +37,8 @@
 								<thead>
 									<tr>
 										<th style="width:10px">#</th>
-										<th>Tarifa</th>
-										<th style="width: 25%;">Acciones</th>
+										<th>Name</th>
+										<th style="width: 25%;">Action</th>
 									</tr>
 								</thead>
 								<tbody>
@@ -49,9 +49,9 @@
 											<td>{{ $fee->name }}</td>
 											<td>
 												
-												<a href="{{ route('fee.category.edit', $fee->id) }}" class="btn btn-info">Editar</a>
+												<a href="{{ route('fee.category.edit', $fee->id) }}" class="btn btn-info">Edit</a>
 
-												<a href="{{ route('fee.category.delete', $fee->id) }}" class="btn btn-danger" id="delete">Eliminar</a>
+												<a href="{{ route('fee.category.delete', $fee->id) }}" class="btn btn-danger" id="delete">Delete</a>
 
 											</td>
 										</tr>

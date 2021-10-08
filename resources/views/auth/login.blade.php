@@ -11,7 +11,7 @@
       <title>School World - Log in</title>
       
       <!-- Favicon -->
-      <link rel="shortcut icon" type="image/x-icon" href="{{ asset('backend/img/favicon.ico') }}">
+      <link rel="shortcut icon" type="image/x-icon" href="{{ asset('backend/img/favicon.png') }}">
     
       <!-- Bootstrap CSS -->
       <link rel="stylesheet" href="{{ asset('backend/css/bootstrap.min.css') }}">
@@ -34,15 +34,15 @@
           <div class="container">
         
             <!-- Account Logo -->
-            {{-- <div class="account-logo">
-              <a href="index.html"><img src="{{ asset('backend/img/logo.png') }}" alt="Dreamguy's Technologies"></a>
-            </div> --}}
+            <div class="account-logo">
+              <a href=""><img src="{{ asset('backend/img/logo2.png') }}" alt="School World"></a>
+            </div>
             <!-- /Account Logo -->
           
             <div class="account-box">
               <div class="account-wrapper">
-                <h3 class="account-title">Iniciar Sesión</h3>
-                <p class="account-subtitle">Acceso al dashboard</p>
+                <h3 class="account-title">Sign in to start your session</h3>
+                <p class="account-subtitle">Dashboard access</p>
                 
                 <!-- Account Form -->
                 <form action="{{ route('login') }}" method="post">
@@ -50,14 +50,14 @@
                   @csrf
 
                   <div class="form-group">
-                    <label>Correo Electrónico</label>
+                    <label>Email</label>
                     <input class="form-control" type="email" id="email" name="email">
                   </div>
 
                   <div class="form-group">
                     <div class="row">
                       <div class="col">
-                        <label>Contraseña</label>
+                        <label>Password</label>
                       </div>
                       <div class="col-auto">
 
@@ -75,7 +75,7 @@
                   </div>
 
                   <div class="form-group text-center">
-                    <button class="btn btn-primary account-btn" type="submit">Acceder</button>
+                    <button class="btn btn-primary account-btn" type="submit">SIGN IN</button>
                   </div>
 
                 </form>

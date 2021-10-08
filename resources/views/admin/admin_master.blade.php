@@ -130,20 +130,20 @@
 					var link = $(this).attr("href");
 
 					Swal.fire({
-					  title: '¿Estás seguro de borrar la información?',
-					  text: "¡Si no lo está puede cancelar la accíón!",
+					  title: 'Are you sure?',
+					  text: "Delete This Data?",
 					  icon: 'warning',
 					  showCancelButton: true,
 					  confirmButtonColor: '#3085d6',
 					  cancelButtonColor: '#d33',
-					  cancelButtonText: 'Cancelar',
-					  confirmButtonText: 'Si, borrar!'
+					  cancelButtonText: 'Cancel',
+					  confirmButtonText: 'Yes, delete it!'
 					}).then((result) => {
 					  if (result.isConfirmed) {
 					  	window.location.href = link
 					    Swal.fire(
-					      'Eliminado!',
-					      'La información ha sido eliminada.',
+					      'Deleted!',
+					      'Your file has been deleted.',
 					      'success'
 					    )
 					  }

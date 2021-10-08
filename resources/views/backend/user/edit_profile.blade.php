@@ -1,6 +1,6 @@
 @extends('admin.admin_master')
 
-@section('title','Editar Perfil')
+@section('title','Manage Profile')
 
 @section('admin')
 
@@ -16,11 +16,11 @@
 		<div class="page-header">
 			<div class="row">
 				<div class="col">
-					<h3 class="page-title">Editar Perfil</h3>
+					<h3 class="page-title">Manage Profile</h3>
 					<ul class="breadcrumb">
 						<li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Dashboard</a></li>
-						<li class="breadcrumb-item"><a href="{{ route('profile.view') }}">Mi Perfil</a></li>
-						<li class="breadcrumb-item active">Editar Perfil</li>
+						<li class="breadcrumb-item"><a href="{{ route('profile.view') }}">My Perfil</a></li>
+						<li class="breadcrumb-item active">Manage Profile</li>
 					</ul>
 				</div>
 			</div>
@@ -45,7 +45,7 @@
 										<div class="col-md-6">
 
 											<div class="form-group">
-												<label class="">Nombre de Usuario <span class="text-danger">*</span></label>
+												<label class="">User Name <span class="text-danger">*</span></label>
 												<input type="text" name="name" class="form-control"  class="form-control" value="{{ $editData->name }}" required>
 											</div>
 
@@ -56,7 +56,7 @@
 										<div class="col-md-6">
 											
 											<div class="form-group">
-												<label class="">Correo electrónico <span class="text-danger">*</span></label>
+												<label class="">User Email <span class="text-danger">*</span></label>
 												<input type="email" name="email" class="form-control"  class="form-control" value="{{ $editData->email }}" required>
 											</div>
 
@@ -73,7 +73,7 @@
 										<div class="col-md-6">
 
 											<div class="form-group">
-												<label class="">Celular <span class="text-danger">*</span></label>
+												<label class="">User Mobile <span class="text-danger">*</span></label>
 												<input type="text" name="mobile" class="form-control"  class="form-control" value="{{ $editData->mobile }}" required>
 											</div>
 
@@ -84,7 +84,7 @@
 										<div class="col-md-6">
 											
 											<div class="form-group">
-												<label class="">Dirección <span class="text-danger">*</span></label>
+												<label class="">User Address <span class="text-danger">*</span></label>
 												<input type="text" name="address" class="form-control"  class="form-control" value="{{ $editData->address }}" required>
 											</div>
 
@@ -101,10 +101,10 @@
 										<div class="col-md-6">
 
 											<div class="form-group">
-												<label class="">Género <span class="text-danger">*</span></label>
+												<label class="">User Gender <span class="text-danger">*</span></label>
 												<select class="form-control" name="gender" id="gender" required>
-													<option value="Masculino" {{ ($editData->usertype == "Masculino" ? "selected" : "") }}>Masculino</option>
-													<option value="Femenino" {{ ($editData->usertype == "Femenino" ? "selected" : "") }}>Femenino</option>
+													<option value="Male" {{ ($editData->usertype == "Male" ? "selected" : "") }}>Male</option>
+													<option value="Female" {{ ($editData->usertype == "Female" ? "selected" : "") }}>Female</option>
 												</select>
 											</div>
 
@@ -115,7 +115,7 @@
 										<div class="col-md-6">
 											
 											<div class="form-group">
-												<label class="">Foto<span class="text-danger">*</span></label>
+												<label class="">Profile Image<span class="text-danger">*</span></label>
 												<div class="">
 													<input type="file" name="image" id="image" class="form-control">
 												</div>
@@ -137,8 +137,8 @@
 
 									<div>
 										
-										<input type="submit" class="btn btn-primary" value="Actualizar" required>
-										<a href="{{ route('profile.view') }}" class="btn btn-secondary"> Cancelar</a>
+										<input type="submit" class="btn btn-primary" value="Update" required>
+										<a href="{{ route('profile.view') }}" class="btn btn-secondary"> Cancel</a>
 
 									</div>
 

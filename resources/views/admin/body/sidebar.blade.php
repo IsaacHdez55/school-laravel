@@ -20,31 +20,32 @@ $route = Route::current()->getName();
           </li>
 
           <li class="submenu {{ ($prefix == '/users')?'active':'' }} " >
-            <a class=""><i class="la la-users"></i> <span> Gestión de Usuarios</span> <span class="menu-arrow"></span></a>
+            <a class=""><i class="la la-users"></i> <span> Manage User</span> <span class="menu-arrow"></span></a>
             <ul style="display: none;">
-              <li><a class="{{ ($route == 'user.view')?'active':'' }}" href="{{ route('user.view') }}"> Ver usuarios</a></li>
-              <li><a class="{{ ($route == 'users.add')?'active':'' }}" href="{{ route('users.add') }}"> Agregar usuario</a></li>
+              <li><a class="{{ ($route == 'user.view')?'active':'' }}" href="{{ route('user.view') }}"> View User</a></li>
+              <li><a class="{{ ($route == 'users.add')?'active':'' }}" href="{{ route('users.add') }}"> Add User</a></li>
             </ul>
           </li>
 
           <li class="submenu {{ ($prefix == '/profiles')?'active':'' }}" >
-            <a href=""><i class="la la-user"></i> <span> Gestión de perfil</span> <span class="menu-arrow"></span></a>
+            <a href=""><i class="la la-user"></i> <span> Manage Profile</span> <span class="menu-arrow"></span></a>
             <ul style="display: none;">
-              <li><a class="{{ ($route == 'profile.view')?'active':'' }}" href="{{ route('profile.view') }}"> Mi Perfil</a></li>
-              <li><a class="{{ ($route == 'password.view')?'active':'' }}" href="{{ route('password.view') }}"> Cambiar Contraseña</a></li>
+              <li><a class="{{ ($route == 'profile.view')?'active':'' }}" href="{{ route('profile.view') }}"> Your Profile</a></li>
+              <li><a class="{{ ($route == 'password.view')?'active':'' }}" href="{{ route('password.view') }}"> Change Password</a></li>
             </ul>
           </li>
 
           <li class="submenu {{ ($prefix == '/setups')?'active':'' }} " >
-            <a class=""><i class="la la-building"></i> <span> Académico</span> <span class="menu-arrow"></span></a>
+            <a class=""><i class="la la-building"></i> <span> Setup Management</span> <span class="menu-arrow"></span></a>
             <ul style="display: none;">
-              <li><a class="{{ ($route == 'student.class.view')?'active':'' }}" href="{{ route('student.class.view') }}"> Clases </a></li>
-              <li><a class="{{ ($route == 'student.year.view')?'active':'' }}" href="{{ route('student.year.view') }}"> Año Académico </a></li>
-              <li><a class="{{ ($route == 'student.group.view')?'active':'' }}" href="{{ route('student.group.view') }}"> Grupo </a></li>
-              <li><a class="{{ ($route == 'student.shift.view')?'active':'' }}" href="{{ route('student.shift.view') }}"> Turno </a></li>
-              <li><a class="{{ ($route == 'fee.category.view')?'active':'' }}" href="{{ route('fee.category.view') }}"> Tarifas </a></li>
-              <li><a class="{{ ($route == 'fee.amount.view')?'active':'' }}" href="{{ route('fee.amount.view') }}"> Importe de Tarifa </a></li>
-              <li><a class="{{ ($route == 'exam.type.view')?'active':'' }}" href="{{ route('exam.type.view') }}"> Examenes </a></li>
+              <li><a class="{{ ($route == 'student.class.view')?'active':'' }}" href="{{ route('student.class.view') }}"> Student Class </a></li>
+              <li><a class="{{ ($route == 'student.year.view')?'active':'' }}" href="{{ route('student.year.view') }}"> Student Year </a></li>
+              <li><a class="{{ ($route == 'student.group.view')?'active':'' }}" href="{{ route('student.group.view') }}"> Student Group </a></li>
+              <li><a class="{{ ($route == 'student.shift.view')?'active':'' }}" href="{{ route('student.shift.view') }}"> Student Shift </a></li>
+              <li><a class="{{ ($route == 'fee.category.view')?'active':'' }}" href="{{ route('fee.category.view') }}"> Fee Category </a></li>
+              <li><a class="{{ ($route == 'fee.amount.view')?'active':'' }}" href="{{ route('fee.amount.view') }}"> Fee Category Amount </a></li>
+              <li><a class="{{ ($route == 'exam.type.view')?'active':'' }}" href="{{ route('exam.type.view') }}"> Exam Type </a></li>
+              <li><a class="{{ ($route == 'school.subject.view')?'active':'' }}" href="{{ route('school.subject.view') }}"> School Subject </a></li>
             </ul>
           </li>
 
