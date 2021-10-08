@@ -40,7 +40,7 @@
 
 											
 									<div class="form-group">
-										<label class="">Tarifa <span class="text-danger">*</span></label>
+										<label class="">Nombre del Tarifa <span class="text-danger">*</span></label>
 										<input type="text" id="name" name="name" class="form-control" required>
 
 										@error('name')

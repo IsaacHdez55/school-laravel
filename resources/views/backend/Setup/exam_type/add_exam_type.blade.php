@@ -1,6 +1,6 @@
 @extends('admin.admin_master')
 
-@section('title','Agregar Grupo')
+@section('title','Agregar Examen')
 
 @section('admin')
 
@@ -14,11 +14,11 @@
 		<div class="page-header">
 			<div class="row">
 				<div class="col">
-					<h3 class="page-title">Agregar Grupo</h3>
+					<h3 class="page-title">Agregar Examen</h3>
 					<ul class="breadcrumb">
 						<li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Dashboard</a></li>
-						<li class="breadcrumb-item"><a href="{{ route('student.group.view') }}">Gestión de Grupos</a></li>
-						<li class="breadcrumb-item active">Agregar Grupo</li>
+						<li class="breadcrumb-item"><a href="{{ route('exam.type.view') }}">Gestión de Examenes</a></li>
+						<li class="breadcrumb-item active">Agregar Examen</li>
 					</ul>
 				</div>
 			</div>
@@ -30,7 +30,7 @@
 				<div class="card">
 
 					<div class="card-body">
-						<form action="{{ route('store.student.group') }}" method="post">
+						<form action="{{ route('store.exam.type') }}" method="post">
 
 							@csrf
 
@@ -40,7 +40,7 @@
 
 											
 									<div class="form-group">
-										<label class="">Nombre del Grupo <span class="text-danger">*</span></label>
+										<label class="">Nombre del Examen <span class="text-danger">*</span></label>
 										<input type="text" id="name" name="name" class="form-control" required>
 
 										@error('name')
@@ -55,7 +55,7 @@
 										
 										<input type="submit" class="btn btn-primary" value="Agregar">
 
-										<a href="{{ route('student.group.view') }}" class="btn btn-secondary"> Cancelar</a>
+										<a href="{{ route('exam.type.view') }}" class="btn btn-secondary"> Cancelar</a>
 
 									</div>
 

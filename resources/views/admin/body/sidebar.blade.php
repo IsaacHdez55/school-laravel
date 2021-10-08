@@ -44,6 +44,7 @@ $route = Route::current()->getName();
               <li><a class="{{ ($route == 'student.shift.view')?'active':'' }}" href="{{ route('student.shift.view') }}"> Turno </a></li>
               <li><a class="{{ ($route == 'fee.category.view')?'active':'' }}" href="{{ route('fee.category.view') }}"> Tarifas </a></li>
               <li><a class="{{ ($route == 'fee.amount.view')?'active':'' }}" href="{{ route('fee.amount.view') }}"> Importe de Tarifa </a></li>
+              <li><a class="{{ ($route == 'exam.type.view')?'active':'' }}" href="{{ route('exam.type.view') }}"> Examenes </a></li>
             </ul>
           </li>
 

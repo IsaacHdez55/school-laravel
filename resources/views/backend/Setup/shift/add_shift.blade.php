@@ -40,7 +40,7 @@
 
 											
 									<div class="form-group">
-										<label class="">Turno <span class="text-danger">*</span></label>
+										<label class="">Nombre del Turno <span class="text-danger">*</span></label>
 										<input type="text" id="name" name="name" class="form-control" required>
 
 										@error('name')
