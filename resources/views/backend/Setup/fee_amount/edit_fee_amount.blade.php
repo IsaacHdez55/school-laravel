@@ -1,6 +1,6 @@
 @extends('admin.admin_master')
 
-@section('title','Agregar Importe de Tarifa')
+@section('title','Editar Importe de Tarifa')
 
 @section('admin')
 
@@ -16,11 +16,11 @@
 		<div class="page-header">
 			<div class="row">
 				<div class="col">
-					<h3 class="page-title">Agregar Importe de Tarifa</h3>
+					<h3 class="page-title">Editar Importe de Tarifa</h3>
 					<ul class="breadcrumb">
 						<li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Dashboard</a></li>
 						<li class="breadcrumb-item"><a href="{{ route('fee.amount.view') }}">Gestión de Tarifas</a></li>
-						<li class="breadcrumb-item active">Agregar Importe de Tarifa</li>
+						<li class="breadcrumb-item active">Editar Importe de Tarifa</li>
 					</ul>
 				</div>
 			</div>
@@ -32,7 +32,7 @@
 				<div class="card">
 
 					<div class="card-body">
-						<form action="{{ route('store.fee.amount') }}" method="post">
+						<form action="{{ route('update.fee.amount', $editData['0']->fee_category_id) }}" method="post">
 
 							@csrf
 
@@ -50,13 +50,17 @@
 
 												@foreach ($fee_categories as $category)
 												
-													<option value="{{ $category->id }}">{{ $category->name }}</option>
+													<option value="{{ $category->id }}" {{ ($editData['0']->fee_category_id == $category->id)? "selected": "" }}>{{ $category->name }}</option>
 
 												@endforeach
 
 											</select>
 											</div>
 										</div> {{-- End Form Group --}}
+
+										@foreach ($editData as $edit)
+
+										<div class="delete_whole_extra_item_add" id="delete_whole_extra_item_add">
 
 										<div class="row">
 											
@@ -70,7 +74,7 @@
 
 															@foreach ($classes as $class)
 															
-																<option value="{{ $class->id }}">{{ $class->name }}</option>
+																<option value="{{ $class->id }}" {{ ($edit->class_id == $class->id) ? "selected" : "" }}>{{ $class->name }}</option>
 
 															@endforeach
 
@@ -84,7 +88,7 @@
 
 												<div class="form-group">
 													<label class="">Cantidad <span class="text-danger">*</span></label>
-													<input type="text" name="amount[]" class="form-control" required>
+													<input type="text" name="amount[]" value="{{ $edit->amount }}" class="form-control" required>
 												</div>
 												
 											</div> {{-- End col-md-5 --}}
@@ -92,10 +96,15 @@
 											<div class="col-md-2" style="padding-top: 25px;">
 
 												<span class="btn btn-success addeventmore"><i class="fa fa-plus"></i></span>
+												<span class="btn btn-danger removeeventmore"><i class="fa fa-minus"></i></span>
 												
 											</div> {{-- End col-md-2 --}}
 
 										</div> {{-- End Row --}}
+
+										</div> {{-- End Delete Whole Extra Item --}}
+
+										@endforeach
 
 									</div> {{-- End add_item --}}
 
@@ -107,9 +116,9 @@
 
 					<div class="card-footer">
 										
-						<input type="submit" class="btn btn-primary" value="Agregar">
+						<input type="submit" class="btn btn-primary" value="Actualizar">
 
-						<a href="{{ route('fee.category.view') }}" class="btn btn-secondary"> Cancelar</a>
+						<a href="{{ route('fee.amount.view') }}" class="btn btn-secondary"> Cancelar</a>
 
 					</div>
 

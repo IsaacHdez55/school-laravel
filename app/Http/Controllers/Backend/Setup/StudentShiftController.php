@@ -36,7 +36,7 @@ class StudentShiftController extends Controller
 
         $notification = array(
 
-            'message' => '¡El turno ha sido guardado correctamente!',
+            'message' => '¡La información ha sido guardada correctamente!',
             'alert-type' => 'success',
 
         );
@@ -68,7 +68,7 @@ class StudentShiftController extends Controller
 
         $notification = array(
 
-            'message' => '¡El turno ha sido editado correctamente!',
+            'message' => '¡La información ha sido editada correctamente!',
             'alert-type' => 'success',
 
         );
@@ -84,7 +84,7 @@ class StudentShiftController extends Controller
 
         $notification = array(
 
-            'message' => '¡El turno académico ha sido elimiando correctamente!',
+            'message' => '¡La información académico ha sido eliminada correctamente!',
             'alert-type' => 'info',
 
         );

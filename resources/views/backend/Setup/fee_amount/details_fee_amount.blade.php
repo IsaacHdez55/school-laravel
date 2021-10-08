@@ -1,6 +1,6 @@
 @extends('admin.admin_master')
 
-@section('title','Gestión de Importe de Tarifas')
+@section('title','Detalles de Importe de Tarifa')
 
 @section('admin')
 
@@ -14,10 +14,11 @@
 		<div class="page-header">
 			<div class="row align-items-center">
 				<div class="col">
-					<h3 class="page-title">Gestión de Importe de Tarifas</h3>
+					<h3 class="page-title">Detalles de Importe de Tarifa</h3>
 					<ul class="breadcrumb">
 						<li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Dashboard</a></li>
-						<li class="breadcrumb-item active">Gestión de Importe de Tarifas</li>
+						<li class="breadcrumb-item"><a href="{{ route('fee.amount.view') }}">Gestión de Importe de Tarifas</a></li>
+						<li class="breadcrumb-item active">Detalles de Importe de Tarifa</li>
 					</ul>
 				</div>
 				<div class="col-auto float-right ml-auto">
@@ -30,30 +31,29 @@
 		<div class="row">
 			<div class="col-sm-12">
 				<div class="card mb-0">
+
+					<div class="card-header">
+						<h4 class="card-title mb-0"><strong>Tarifa: </strong> {{ $detailsData['0']['fee_category']['name'] }}</h4>
+					</div>
+
 					<div class="card-body">
 
 						<div class="table-responsive">
-							<table id="fee_amount" width="100%" class="datatable table table-bordered table-striped">
+							<table id="details_fee_amount" width="100%" class="datatable table table-bordered table-striped">
 								<thead>
 									<tr>
 										<th style="width:10px">#</th>
-										<th>Tarifa</th>
-										<th style="width: 25%;">Acciones</th>
+										<th>Clase</th>
+										<th style="width: 25%;">Cantidad</th>
 									</tr>
 								</thead>
 								<tbody>
-									@foreach ($allData as $key => $amount)
+									@foreach ($detailsData as $key => $detail)
 
 										<tr>
 											<td>{{ $key + 1 }}</td>
-											<td>{{ $amount['fee_category']['name'] }}</td>
-											<td>
-												
-												<a href="{{ route('fee.amount.edit', $amount->fee_category_id) }}" class="btn btn-info">Editar</a>
-
-												<a href="{{ route('fee.amount.details', $amount->fee_category_id) }}" class="btn btn-success">Detalles</a>
-
-											</td>
+											<td>{{ $detail['student_class']['name'] }}</td>
+											<td>{{ $detail->amount }}</td>
 										</tr>
 
 									@endforeach

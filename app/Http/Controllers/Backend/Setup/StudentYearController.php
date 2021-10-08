@@ -37,7 +37,7 @@ class StudentYearController extends Controller
 
         $notification = array(
 
-            'message' => '¡El año académico ha sido guardado correctamente!',
+            'message' => '¡La información ha sido guardada correctamente!',
             'alert-type' => 'success',
 
         );
@@ -69,7 +69,7 @@ class StudentYearController extends Controller
 
         $notification = array(
 
-            'message' => '¡El año académico ha sido editado correctamente!',
+            'message' => '¡La información ha sido editada correctamente!',
             'alert-type' => 'success',
 
         );
@@ -85,7 +85,7 @@ class StudentYearController extends Controller
 
         $notification = array(
 
-            'message' => '¡El año académico ha sido elimiando correctamente!',
+            'message' => '¡La información ha sido elimianda correctamente!',
             'alert-type' => 'info',
 
         );
