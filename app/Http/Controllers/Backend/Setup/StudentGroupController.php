@@ -26,7 +26,7 @@ class StudentGroupController extends Controller
 
         $validatedData = $request->validate([
 
-            'name' => 'required|unique:student_years,name',
+            'name' => 'required|unique:student_groups,name',
 
         ]);
 

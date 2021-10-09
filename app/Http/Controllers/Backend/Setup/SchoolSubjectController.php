@@ -26,7 +26,7 @@ class SchoolSubjectController extends Controller
 
         $validatedData = $request->validate([
 
-            'name' => 'required|unique:student_shifts,name',
+            'name' => 'required|unique:school_subjects,name',
 
         ]);
 
@@ -59,7 +59,7 @@ class SchoolSubjectController extends Controller
 
         $validatedData = $request->validate([
 
-            'name' => 'required|unique:student_shifts,name,'.$data->id,
+            'name' => 'required|unique:school_subjects,name,'.$data->id,
 
         ]);
 

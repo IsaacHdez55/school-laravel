@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="{{ asset('backend/css/line-awesome.min.css') }}">
 	
 		<!-- Chart CSS -->
-		<link rel="stylesheet" href="{{ asset('backend/plugins/morris/morris.css') }}">
+		{{-- <link rel="stylesheet" href="{{ asset('backend/plugins/morris/morris.css') }}"> --}}
 	
 		<!-- Main CSS -->
     <link rel="stylesheet" href="{{ asset('backend/css/style.css') }}">

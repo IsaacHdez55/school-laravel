@@ -46,6 +46,7 @@ $route = Route::current()->getName();
               <li><a class="{{ ($route == 'fee.amount.view')?'active':'' }}" href="{{ route('fee.amount.view') }}"> Fee Category Amount </a></li>
               <li><a class="{{ ($route == 'exam.type.view')?'active':'' }}" href="{{ route('exam.type.view') }}"> Exam Type </a></li>
               <li><a class="{{ ($route == 'school.subject.view')?'active':'' }}" href="{{ route('school.subject.view') }}"> School Subject </a></li>
+              <li><a class="{{ ($route == 'assign.subject.view')?'active':'' }}" href="{{ route('assign.subject.view') }}"> Assign Subject </a></li>
             </ul>
           </li>
 

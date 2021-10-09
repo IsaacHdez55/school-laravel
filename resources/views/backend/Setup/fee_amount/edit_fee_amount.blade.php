@@ -118,7 +118,7 @@
 										
 						<input type="submit" class="btn btn-primary" value="Update">
 
-						<a href="{{ route('fee.amount.view') }}" class="btn btn-secondary"> Cancel</a>
+						<a href="{{ route('assign.subject.view') }}" class="btn btn-secondary"> Cancel</a>
 
 					</div>
 

@@ -12,6 +12,7 @@ use App\Http\Controllers\Backend\Setup\FeeCategoryController;
 use App\Http\Controllers\Backend\Setup\FeeAmountController;
 use App\Http\Controllers\Backend\Setup\ExamTypeController;
 use App\Http\Controllers\Backend\Setup\SchoolSubjectController;
+use App\Http\Controllers\Backend\Setup\AssignSubjectController;
 
 /*
 |--------------------------------------------------------------------------
@@ -63,7 +64,7 @@ Route::prefix('profiles')->group(function (){
 
 Route::prefix('setups')->group(function (){
 
-    // Rutas Student Class
+    // Route Student Class
 
     Route::get('/student/class/view', [StudentClassController::class, 'ViewStudent'])->name('student.class.view');
     Route::get('/student/class/add', [StudentClassController::class, 'StudentClassAdd'])->name('student.class.add');
@@ -72,7 +73,7 @@ Route::prefix('setups')->group(function (){
     Route::post('/student/class/update/{id}', [StudentClassController::class, 'StudentClassUpdate'])->name('update.student.class');
     Route::get('/student/class/delete/{id}', [StudentClassController::class, 'StudentClassDelete'])->name('student.class.delete');
 
-    // Rutas Student Year
+    // Route Student Year
 
     Route::get('/student/year/view', [StudentYearController::class, 'ViewYear'])->name('student.year.view');
     Route::get('/student/year/add', [StudentYearController::class, 'StudentYearAdd'])->name('student.year.add');
@@ -81,7 +82,7 @@ Route::prefix('setups')->group(function (){
     Route::post('/student/year/update/{id}', [StudentYearController::class, 'StudentYearUpdate'])->name('update.student.year');
     Route::get('/student/year/delete/{id}', [StudentYearController::class, 'StudentYearDelete'])->name('student.year.delete');
 
-    // Rutas Student Group
+    // Route Student Group
 
     Route::get('/student/group/view', [StudentGroupController::class, 'ViewGroup'])->name('student.group.view');
     Route::get('/student/group/add', [StudentGroupController::class, 'StudentGroupAdd'])->name('student.group.add');
@@ -90,7 +91,7 @@ Route::prefix('setups')->group(function (){
     Route::post('/student/group/update/{id}', [StudentGroupController::class, 'StudentGroupUpdate'])->name('update.student.group');    
     Route::get('/student/group/delete/{id}', [StudentGroupController::class, 'StudentGroupDelete'])->name('student.group.delete');
 
-    // Rutas (Student Shift)
+    // Route (Student Shift)
 
     Route::get('/student/shift/view', [StudentShiftController::class, 'ViewShift'])->name('student.shift.view');
     Route::get('/student/shift/add', [StudentShiftController::class, 'StudentShiftAdd'])->name('student.shift.add');
@@ -99,7 +100,7 @@ Route::prefix('setups')->group(function (){
     Route::post('/student/shift/update/{id}', [StudentShiftController::class, 'StudentShiftUpdate'])->name('update.student.shift');   
     Route::get('/student/shift/delete/{id}', [StudentShiftController::class, 'StudentShiftDelete'])->name('student.shift.delete');
 
-    // Rutas (Fee Category)
+    // Route (Fee Category)
 
     Route::get('/fee/category/view', [FeeCategoryController::class, 'ViewFeeCat'])->name('fee.category.view');
     Route::get('/fee/category/add', [FeeCategoryController::class, 'FeeCategoryAdd'])->name('fee.category.add');
@@ -108,7 +109,7 @@ Route::prefix('setups')->group(function (){
     Route::post('/fee/category/update/{id}', [FeeCategoryController::class, 'FeeCategoryUpdate'])->name('update.fee.category');  
     Route::get('/fee/category/delete/{id}', [FeeCategoryController::class, 'FeeCategoryDelete'])->name('fee.category.delete');
 
-    // Rutas (Fee Category Amount)
+    // Route (Fee Category Amount)
 
     Route::get('/fee/amount/view', [FeeAmountController::class, 'ViewFeeAmount'])->name('fee.amount.view');
     Route::get('/fee/amount/add', [FeeAmountController::class, 'AddFeeAmount'])->name('fee.amount.add');
@@ -117,7 +118,7 @@ Route::prefix('setups')->group(function (){
     Route::post('/fee/amount/update/{fee_category_id}', [FeeAmountController::class, 'UpdateFeeAmount'])->name('update.fee.amount');
     Route::get('/fee/amount/details/{fee_category_id}', [FeeAmountController::class, 'DetailsFeeAmount'])->name('fee.amount.details');
 
-    // Rutas (ExamType)
+    // Route (ExamType)
 
     Route::get('/exam/type/view', [ExamTypeController::class, 'ViewExamType'])->name('exam.type.view');
     Route::get('/exam/type/add', [ExamTypeController::class, 'ExamTypeAdd'])->name('exam.type.add');
@@ -126,7 +127,7 @@ Route::prefix('setups')->group(function (){
     Route::post('/exam/type/update/{id}', [ExamTypeController::class, 'ExamTypeUpdate'])->name('update.exam.type');   
     Route::get('/exam/type/delete/{id}', [ExamTypeController::class, 'ExamTypeDelete'])->name('exam.type.delete');
 
-    // Rutas School Subject
+    // Route School Subject
     Route::get('/school/subject/view', [SchoolSubjectController::class, 'ViewSchoolSubject'])->name('school.subject.view');
     Route::get('/school/subject/add', [SchoolSubjectController::class, 'SchoolSubjectAdd'])->name('school.subject.add');
     Route::post('/school/subject/store', [SchoolSubjectController::class, 'SchoolSubjectStore'])->name('store.school.subject');
@@ -134,7 +135,14 @@ Route::prefix('setups')->group(function (){
     Route::post('/school/subject/update/{id}', [SchoolSubjectController::class, 'SchoolSubjectUpdate'])->name('update.school.subject');   
     Route::get('/school/subject/delete/{id}', [SchoolSubjectController::class, 'SchoolSubjectDelete'])->name('school.subject.delete');
 
+    // Route Assign Subject
 
+    Route::get('/assign/subject/view', [AssignSubjectController::class, 'ViewAssignSubject'])->name('assign.subject.view');
+    Route::get('/assign/subject/add', [AssignSubjectController::class, 'AddAssignSubject'])->name('assign.subject.add');
+    Route::post('/assign/subject/store', [AssignSubjectController::class, 'StoreAssignSubject'])->name('store.assign.subject');
+    Route::get('/assign/subject/edit/{class_id}', [AssignSubjectController::class, 'EditAssignSubject'])->name('assign.subject.edit');
+    Route::post('/assign/subject/update/{class_id}', [AssignSubjectController::class, 'UpdateAssignSubject'])->name('update.assign.subject');
+    Route::get('/assign/subject/details/{class_id}', [AssignSubjectController::class, 'DetailsAssignSubject'])->name('assign.subject.details');
 
 
 });
