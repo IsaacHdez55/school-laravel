@@ -44,10 +44,10 @@
 
 											<div class="form-group">
 												<label class="">User Role <span class="text-danger">*</span></label>
-												<select class="form-control" name="usertype" id="usertype" required>
+												<select class="form-control" name="role" id="role" required>
 													<option value="" selected disabled>-- Select Role --</option>
 													<option value="Admin">Admin</option>
-													<option value="User">User</option>
+													<option value="Operator">Operator</option>
 												</select>
 											</div>
 
@@ -92,10 +92,10 @@
 
 										<div class="col-md-6">
 											
-											<div class="form-group">
+											{{-- <div class="form-group">
 												<label class="">User Password <span class="text-danger">*</span></label>
 												<input type="password" name="password" class="form-control" required>
-											</div>
+											</div> --}}
 
 										</div>
 

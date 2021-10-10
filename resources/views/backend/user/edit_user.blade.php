@@ -47,9 +47,9 @@
 
 											<div class="form-group">
 												<label class="">User Role <span class="text-danger">*</span></label>
-												<select class="form-control" name="usertype" id="usertype" required>
-													<option value="Admin" {{ ($editData->usertype == "Admin" ? "selected" : "") }}>Admin</option>
-													<option value="User" {{ ($editData->usertype == "User" ? "selected" : "") }}>User</option>
+												<select class="form-control" name="role" required>
+													<option value="Admin" {{ ($editData->role == "Admin" ? "selected" : "") }}>Admin</option>
+													<option value="Operator" {{ ($editData->role == "Operator" ? "selected" : "") }}>Operator</option>
 												</select>
 											</div>
 

@@ -19,6 +19,7 @@ $route = Route::current()->getName();
             <a href="{{ route('dashboard') }}"><i class="la la-dashboard"></i> <span>Dashboard</span></a>
           </li>
 
+          @if (Auth::user()->role == 'Admin')
           <li class="submenu {{ ($prefix == '/users')?'active':'' }} " >
             <a class=""><i class="la la-users"></i> <span> Manage User</span> <span class="menu-arrow"></span></a>
             <ul style="display: none;">
@@ -26,7 +27,7 @@ $route = Route::current()->getName();
               <li><a class="{{ ($route == 'users.add')?'active':'' }}" href="{{ route('users.add') }}"> Add User</a></li>
             </ul>
           </li>
-
+          @endif
           <li class="submenu {{ ($prefix == '/profiles')?'active':'' }}" >
             <a href=""><i class="la la-user"></i> <span> Manage Profile</span> <span class="menu-arrow"></span></a>
             <ul style="display: none;">
@@ -48,7 +49,13 @@ $route = Route::current()->getName();
               <li><a class="{{ ($route == 'school.subject.view')?'active':'' }}" href="{{ route('school.subject.view') }}"> School Subject </a></li>
               <li><a class="{{ ($route == 'assign.subject.view')?'active':'' }}" href="{{ route('assign.subject.view') }}"> Assign Subject </a></li>
               <li><a class="{{ ($route == 'designation.view')?'active':'' }}" href="{{ route('designation.view') }}"> Designation </a></li>
+            </ul>
+          </li>
 
+          <li class="submenu {{ ($prefix == '/students')?'active':'' }} " >
+            <a class=""><i class="la la-graduation-cap"></i> <span> Student Management</span> <span class="menu-arrow"></span></a>
+            <ul style="display: none;">
+              <li><a class="{{ ($route == 'student.registration.view')?'active':'' }}" href="{{ route('student.registration.view') }}"> Student Registration </a></li>
             </ul>
           </li>
 

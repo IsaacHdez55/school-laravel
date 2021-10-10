@@ -191,6 +191,8 @@
 
 		}); 
 
+		$('#fee_category_id').select2();
+
 	});
 
 </script>
